@@ -1,0 +1,106 @@
+/* ProductModal.css */
+
+/* The Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    animation: fadeIn 0.3s ease, slideIn 0.5s ease; /* Fade-in and slide-in animation */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #f8f8f8;
+    margin:  30px; /* Centered horizontally */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    animation: slideInContent 2s ease; /* Slide-in animation for content */
+    display: flex; /* Use flexbox layout */
+}
+
+/* Close Button */
+.close {
+    color: #453a3a;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Show the modal */
+.show {
+    display: block;
+}
+
+/* Additional styles for product details */
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 24px; /* Increase font size for headings */
+    color: #333; /* Darken text color */
+}
+
+.modal-content img {
+    max-width: 50%; /* Adjust image width */
+    margin-right: 20px; /* Add space between image and details */
+    border-radius: 10px; /* Add border radius to image */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow for images */
+}
+
+.modal-content ul {
+    margin-top: 10px; /* Increase top margin */
+    margin-bottom: 20px; /* Increase bottom margin */
+}
+
+.modal-content ul li {
+    font-size: 16px; /* Adjust font size */
+    color: #555; /* Diminish text color */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in animation for modal content */
+@keyframes slideInContent {
+    from {
+        transform: translateY(-50%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Slide-in animation for modal */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

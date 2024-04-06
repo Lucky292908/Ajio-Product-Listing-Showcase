@@ -1,0 +1,116 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  
+}
+
+/* Quick button */
+/* Quick button */
+.Quick {
+  position: relative;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 251, 251, 0.3); /* Red color with 50% opacity */
+  color: #2b2a2a;
+  font-size: 12px ;
+  border: none;
+  padding: 10px 20px;
+  height: 50px;
+  
+  cursor: pointer;
+  width: calc(100% ); /* Subtracting padding from the total width */
+  margin: 2px auto; 
+  margin-top: -70px;/* Center the button */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+  display: none; /* Initially hidden */
+}
+
+.product:hover .Quick {
+  display: block; /* Show on product hover */
+}
+
+.Quick:hover {
+  background-color: rgba(255, 254, 254, 0.5);/* Darker red on hover */
+}
+
+
+
+
+/* Product card */
+.product {
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+ 
+ 
+  padding: 20px;
+  background-color: #f8f8f8; /* White background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+ 
+}
+
+.product:hover {
+  transform: translateY(-5px); /* Move up slightly on hover */
+ 
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  
+  margin-bottom: 15px; /* Space between image and content */
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-name {
+  font-size: 1.4rem; /* Larger font size */
+  margin-top: 0;
+  color: #333; /* Darker text color */
+}
+
+.product-brand {
+  margin: 5px 0;
+  font-size: 1rem; /* Larger font size */
+  color: #666; /* Dim gray color */
+}
+
+.product-price {
+  margin: 10px 0; /* More space between price and other details */
+  font-weight: bold;
+  color: #007bff; /* Blue color for price */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .product {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .product-name {
+    font-size: 1.2rem; /* Decrease font size */
+  }
+
+  .product-brand {
+    font-size: 0.8rem; /* Decrease font size */
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .product {
+    padding: 10px; /* Further reduce padding for smaller screens */
+  }
+
+  .product-name {
+    font-size: 1rem; /* Decrease font size */
+  }
+
+  .product-brand {
+    font-size: 0.7rem; /* Decrease font size */
+  }
+}
